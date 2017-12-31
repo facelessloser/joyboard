@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/python /home/pi/joyboard/joyboard.py
+WorkingDirectory=/home/pi/joyboard/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=joyboard
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
